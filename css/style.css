@@ -218,7 +218,6 @@ p {
 
 /*----hero-section----*/
 .hero {
-  background-image: url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -226,7 +225,7 @@ p {
       rgba(47, 48, 58, 0.8) 80%,
       rgba(47, 48, 58, 0.8) 80%
     ),
-    url(/images/hero.jpg);
+    url(../images/hero.jpg);
 
   padding-top: 200px;
   padding-bottom: 200px;
