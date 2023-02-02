@@ -11,6 +11,8 @@
     --project-section-back: #EEEEEE;
     --logo-color: #000;
     --header-border-line: #ECECEC;
+    --company-logo-color: #AFB1B8;
+    --footer-icon-back-color: #44454E;
 
 
 }
@@ -100,6 +102,8 @@ p {
 
 .header-container {
     display: flex;
+
+    align-items: center;
 }
 
 .header .link { 
@@ -193,6 +197,10 @@ p {
     
 }
 
+.header-address .address-item {
+    box-sizing: border-box;
+}
+
 .contacts {
    display: flex;
    padding: 0;
@@ -205,10 +213,26 @@ p {
 }
 
 .contacts .link:hover,
-.contacts .link:focus {
-    /* color */
+.contacts .link:focus,
+.contacts .icon:hover,
+.contacts .icon:focus {
     color: var(--project-color);
+    fill: var(--project-color);
 }
+
+
+.address-item .link {
+    display: flex;
+    align-items: center;
+}
+
+.header-address .icon {
+    fill: var(--second-text-color);
+
+    margin-right: 10px;
+}
+
+
 
 
 
@@ -216,12 +240,21 @@ p {
 
 /*----hero-section----*/
 .hero {
+    background-image: url(/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8) 80%,
+        rgba(47, 48, 58, 0.8) 80%
+    ),
+    url(/images/hero.jpg)
+    ;
+
     padding-top: 200px;
     padding-bottom: 200px;
 
     text-align: center;
-    /* color */
-    background-color: var(--hero-back-color);
 
 
 }
@@ -256,8 +289,11 @@ p {
     letter-spacing: 0.06em;
 
     padding: 10px 32px;
+    border-style: solid;
     border-radius: 4px;
-    border-color: var(--project-color)
+    border-color: var(--project-color);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -288,6 +324,36 @@ p {
 
 .feature .item:not(:last-child) {
     margin-right: 30px;
+}
+
+.feature .item::before {
+    display: block;
+    content: '';
+    width: 270px;
+    height: 120px;
+
+    margin-bottom: 30px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+
+    border-radius: 4px;
+
+    background-color: var(--section-team-back-color);
+}
+
+.item-one::before {
+    background-image: url(/images/specifics/antenna.png);
+}
+.item-two::before {
+    background-image: url(/images/specifics/clock.png);
+}
+.item-three::before {
+    background-image: url(/images/specifics/diagram.png);
+}
+.item-four::before {
+    background-image: url(/images/specifics/astronaut.png);
 }
 
 .feature .name {
@@ -372,6 +438,8 @@ p {
 
     border-radius: 0 0 4px 4px;
 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -405,12 +473,85 @@ p {
     /* color */
     color: var(--second-text-color);
 
+    margin-bottom: 16px;
+
 }
 
 
+.team .card-social {
+    
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 
+}
 
+.card-social .item {
+    width: 44px;
+    height: 44px;
+}
 
+.card-social .item:hover,
+.card-social .item:focus {
+    border-radius: 50%;
+    background-color:var(--project-color);
+}
+
+.card-social .icon{
+    fill: var(--company-logo-color);
+    padding: 12px;
+}
+
+.card-social .icon:hover,
+.card-social .icon:focus {
+    fill:var(--third-text-color);
+}
+
+/* clients */
+
+.clients .title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    
+    
+    color: var(--main-text-color)
+}
+
+.clients .list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients .item,
+.clients .link {
+    display: inline-block;
+    max-height: 92px;
+}
+
+.clients .icon {
+    border-radius: 4px;
+    border: 1px solid var(--company-logo-color);
+
+    width: 170px;
+    height: 92px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    fill: var(--company-logo-color);
+}
+
+.clients .icon:hover,
+.clients .icon:focus {
+    fill: var(--project-color);
+    border-color: var(--project-color);
+}
 
 
 
@@ -424,18 +565,30 @@ p {
 
     padding: 60px 0;
 }
+
+.footer-contacts {
+    max-height: 132px;
+
+    display: inline-block;
+
+    margin-right: 70px;
+}
 .logo-footer {
+    display: inline-block;
+
+    max-width: 145px;
     /* font */
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: 2;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     /* color */
     color: var(--third-text-color);
 
     margin-bottom: 20px;
+    margin-right: 0;
 }
 .logo-footer .web {
     color: var(--project-color);
@@ -443,24 +596,81 @@ p {
 .map {
     /* font */
     font-size: 14px;
-    line-height: 1.8;
+    line-height: 1.6;
     letter-spacing: 0.03em;
     /* color */
     color: var(--third-text-color);
 
 }
-.contacts-footer .link {
-    line-height: 1.8;
+.contacts-list .link {
+    line-height: 1.7;
     letter-spacing: 0.03em;
     /* color */
     color: var(--third-text-color);
     opacity: 0.6;
 }
 
+.contacts-list .item {
+    display: inline-block;
+}
+
 .footer .item:not(:last-child) {
     margin-bottom: 9px;
 }
 
+.footer .container {
+    display: flex;
+
+    align-items: center;
+
+}
+
+.social-title {
+
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    padding-bottom: 20px;
+
+    color: var(--third-text-color);
+}
+
+.social-footer {
+    padding-top: 10px;
+    align-self: flex-start;
+}
+
+.social-footer .list {
+    display: flex;
+    gap: 10px;
+}
+
+.social-footer .item {
+    display: inline-block;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background-color:var(--footer-icon-back-color);
+}
+
+.social-footer .icon {
+    padding: 12px;
+
+    fill: var(--third-text-color);
+}
+
+.social-footer .icon:hover,
+.social-footer .icon:focus {
+    fill: var();
+}
+.social-footer .item:hover,
+.social-footer .item:focus {
+    background-color: var(--project-color);
+}
 
 
 /* PORTFOLIO */
@@ -542,6 +752,11 @@ p {
     border-left: 1px solid var(--project-section-back);
     border-right: 1px solid var(--project-section-back);
 
+}
+
+.projects .item:hover,
+.projects .item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects .image {
