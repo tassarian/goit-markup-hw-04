@@ -218,7 +218,7 @@ p {
 
 /*----hero-section----*/
 .hero {
-  background-image: url(/images/hero.jpg);
+  background-image: url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -312,16 +312,16 @@ p {
 }
 
 .item-one::before {
-  background-image: url(/images/specifics/antenna.png);
+  background-image: url(../images/specifics/antenna.png);
 }
 .item-two::before {
-  background-image: url(/images/specifics/clock.png);
+  background-image: url(../images/specifics/clock.png);
 }
 .item-three::before {
-  background-image: url(/images/specifics/diagram.png);
+  background-image: url(../images/specifics/diagram.png);
 }
 .item-four::before {
-  background-image: url(/images/specifics/astronaut.png);
+  background-image: url(../images/specifics/astronaut.png);
 }
 
 .feature .name {
