@@ -115,6 +115,9 @@ p {
   letter-spacing: 0.03em;
   /* color */
   color: var(--logo-color);
+
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo-header .web {
@@ -175,6 +178,9 @@ p {
   letter-spacing: 0.02em;
   /* color */
   color: var(--second-text-color);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .contacts {
@@ -519,6 +525,7 @@ p {
 .clients .link:focus {
   fill: var(--project-color);
   border-color: var(--project-color);
+  outline: transparent;
 }
 
 /* footer */
@@ -533,10 +540,6 @@ p {
 }
 
 .footer-contacts {
-  max-height: 132px;
-
-  display: inline-block;
-
   margin-right: 70px;
 }
 .logo-footer {
@@ -575,10 +578,6 @@ p {
   opacity: 0.6;
 }
 
-.contacts-list .item {
-  display: inline-block;
-}
-
 .footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -586,7 +585,7 @@ p {
 .footer .container {
   display: flex;
 
-  align-items: center;
+  align-items: baseline;
 }
 
 .social-title {
@@ -598,11 +597,6 @@ p {
   padding-bottom: 20px;
 
   color: var(--third-text-color);
-}
-
-.social-footer {
-  padding-top: 10px;
-  align-self: flex-start;
 }
 
 .social-footer .list {
@@ -727,6 +721,8 @@ p {
 .projects .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  outline: transparent;
 }
 
 .projects .image {
